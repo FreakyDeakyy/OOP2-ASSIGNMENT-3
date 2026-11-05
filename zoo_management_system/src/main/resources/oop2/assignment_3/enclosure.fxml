@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="327.0" prefWidth="555.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.example.zoomanagement.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" />
+   <AnchorPane prefHeight="303.0" prefWidth="515.0">
+      <children>
+         <Label layoutX="206.0" layoutY="28.0" text="Zoo enclosure " />
+          <Button layoutX="231.0" layoutY="237.0" onAction="#onHelloButtonClick" text="Delete " />
+         <ImageView fitHeight="92.0" fitWidth="127.0" layoutX="21.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../../Zoomanagement/src/main/resources/com/example/zoomanagement/images/lion-8096155_1280.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="92.0" fitWidth="127.0" layoutX="164.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../../Zoomanagement/src/main/resources/com/example/zoomanagement/images/R.jpg" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="92.0" fitWidth="127.0" layoutX="342.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../../Zoomanagement/src/main/resources/com/example/zoomanagement/images/two-tiger-cubs-139749554-2000-9111ddf895e34b56833bb2fa22f0ab01.jpg" />
+            </image>
+         </ImageView>
+         <Button layoutX="459.0" layoutY="11.0" onAction="#onHelloButtonClick" text="Add" />
+         <Button layoutX="21.0" layoutY="24.0" onAction="#onHelloButtonClick" text="Back " />
+         <RadioButton layoutX="43.0" layoutY="204.0" mnemonicParsing="false" text="Lion" />
+         <RadioButton layoutX="201.0" layoutY="204.0" mnemonicParsing="false" text="tiger habitat" />
+         <RadioButton layoutX="384.0" layoutY="204.0" mnemonicParsing="false" text="Tiger cubs" />
+      </children>
+   </AnchorPane>
+</VBox>
