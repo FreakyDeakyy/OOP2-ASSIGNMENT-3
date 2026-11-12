@@ -3,42 +3,34 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="327.0" prefWidth="555.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.example.zoomanagement.HelloController">
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop2a3zms.Controllers.EnclosureViewController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText" />
-   <AnchorPane prefHeight="303.0" prefWidth="515.0">
-      <children>
-         <Label layoutX="206.0" layoutY="28.0" text="Zoo enclosure " />
-          <Button layoutX="231.0" layoutY="237.0" onAction="#onHelloButtonClick" text="Delete " />
-         <ImageView fitHeight="92.0" fitWidth="127.0" layoutX="21.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../../../Zoomanagement/src/main/resources/com/example/zoomanagement/images/lion-8096155_1280.png" />
-            </image>
-         </ImageView>
-         <ImageView fitHeight="92.0" fitWidth="127.0" layoutX="164.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../../../Zoomanagement/src/main/resources/com/example/zoomanagement/images/R.jpg" />
-            </image>
-         </ImageView>
-         <ImageView fitHeight="92.0" fitWidth="127.0" layoutX="342.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../../../Zoomanagement/src/main/resources/com/example/zoomanagement/images/two-tiger-cubs-139749554-2000-9111ddf895e34b56833bb2fa22f0ab01.jpg" />
-            </image>
-         </ImageView>
-         <Button layoutX="459.0" layoutY="11.0" onAction="#onHelloButtonClick" text="Add" />
-         <Button layoutX="21.0" layoutY="24.0" onAction="#onHelloButtonClick" text="Back " />
-         <RadioButton layoutX="43.0" layoutY="204.0" mnemonicParsing="false" text="Lion" />
-         <RadioButton layoutX="201.0" layoutY="204.0" mnemonicParsing="false" text="tiger habitat" />
-         <RadioButton layoutX="384.0" layoutY="204.0" mnemonicParsing="false" text="Tiger cubs" />
-      </children>
-   </AnchorPane>
+    <!-- Enclosure Title / Header -->
+    <Label fx:id="enclosureTitleLabel" text="Lions">
+        <font>
+            <Font name="System Bold" size="20.0" />
+        </font>
+    </Label>
+
+    <!-- Animal ListView matching the whiteboard sketch -->
+    <ListView fx:id="animalListView" prefHeight="250.0" prefWidth="300.0" />
+
+    <!-- Action Buttons (Add, Delete) -->
+    <HBox alignment="CENTER" spacing="10.0">
+        <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAddAnimal" prefWidth="80.0" text="Add" />
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleRemoveAnimal" prefWidth="80.0" text="Delete" />
+    </HBox>
+
+    <!-- Back Button -->
+    <HBox alignment="BOTTOM_LEFT">
+        <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+    </HBox>
 </VBox>
