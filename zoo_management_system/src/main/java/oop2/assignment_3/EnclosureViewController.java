@@ -1,7 +1,7 @@
 package oop2.assignment_3;
 
-import com.example.oop2a3zms.Model.Animal;
-import com.example.oop2a3zms.Model.Enclosure;
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,12 +13,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import java.io.IOException;
+import oop2.assignment_3.Model.Animal;
+import oop2.assignment_3.Model.Enclosure;
 
 /**
- * Controller for managing individual enclosure views, displaying animals,
- * and handling CRUD operations (Add/Delete animals) according to the MVC pattern.
+ * Controller for managing individual enclosure views, displaying animals, and
+ * handling CRUD operations (Add/Delete animals) according to the MVC pattern.
  *
  * @author YourName
  */
@@ -70,8 +70,10 @@ public class EnclosureViewController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/oop2a3zms/animal-view.fxml"));
             Parent view = fxmlLoader.load();
 
-            // If you have an AnimalViewController, you can pass data or a callback here
-            // AnimalViewController animalController = fxmlLoader.getController();
+            // If you have an AnimalViewController, you can pass data or a
+            // callback here
+            // AnimalViewController animalController =
+            // fxmlLoader.getController();
 
             Scene nextScene = new Scene(view, 400, 300);
             Stage nextStage = new Stage();
@@ -89,7 +91,8 @@ public class EnclosureViewController {
     }
 
     /**
-     * Handles the 'Delete' button action to remove the selected animal from the enclosure.
+     * Handles the 'Delete' button action to remove the selected animal from the
+     * enclosure.
      */
     @FXML
     private void handleRemoveAnimal() {
@@ -101,7 +104,8 @@ public class EnclosureViewController {
     }
 
     /**
-     * Handles the 'Back' button action to close the enclosure window and return to the zoo section view.
+     * Handles the 'Back' button action to close the enclosure window and return
+     * to the zoo section view.
      */
     @FXML
     private void handleBack(ActionEvent event) {
