@@ -1,8 +1,14 @@
 package oop2.assignment_3.Model;
 
 public class ZooService {
-    public ZooService setRootSection(ZooSection pRootSection) {
-        // Implementation for setting the root section
-        return this;
+    private ZooSection aRootSection;
+
+    public void setRootSection(ZooSection pRootSection) {
+        this.aRootSection = pRootSection;
     }
+
+    public ZooSection getRootSection() {
+        return this.aRootSection;
+    }
+
 }
