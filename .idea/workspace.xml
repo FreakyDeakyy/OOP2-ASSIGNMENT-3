@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626a915a-89d5-4bff-806b-b28d10ae07f6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/AnimalViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/AnimalViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/EnclosureViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/EnclosureViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/Model/Enclosure.java" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/Model/Enclosure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/resources/oop2/assignment_3/enclosure-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/resources/oop2/assignment_3/enclosure-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="626a915a-89d5-4bff-806b-b28d10ae07f6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +31,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Adm1/OneDrive - Champlain Regional College/2OOP2/OOP2-ASSIGNMENT-3",
     "node.js.detected.package.eslint": "true",
