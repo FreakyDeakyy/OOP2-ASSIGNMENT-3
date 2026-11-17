@@ -46,6 +46,6 @@ public class ZooSection implements ZooComponent {
 
     @Override
     public String toString() {
-        return this.aName;
+        return this.aName + " (" + this.countAnimals() + " animals)";
     }
 }

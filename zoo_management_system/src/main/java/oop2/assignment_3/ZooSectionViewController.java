@@ -90,6 +90,7 @@ public class ZooSectionViewController {
 
     private void displaySection(ZooSection section) {
         currentSection = section;
+
         zooSectionHeaderLabel.setText(section.getName());
         zooSectionSectionsListView.getItems().setAll(section.getComponents());
         updateTotalAnimalsLabel();
