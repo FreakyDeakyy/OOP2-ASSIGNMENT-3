@@ -19,6 +19,7 @@ public class AnimalViewController {
      * The animal being viewed or edited.
      */
     private Animal aAnimal;
+    private Animal currentAnimal;
 
     /**
      * Indicates whether the animal is being created (true)
@@ -118,9 +119,12 @@ public class AnimalViewController {
         this.isNew = false;
         this.aNameTextField.setText(pAnimal.getName());
         this.aAgeSpinner.getValueFactory().setValue(pAnimal.getAge());
-
-        Stage currentStage = (Stage) this.aNameTextField.getScene().getWindow();
-        currentStage.setTitle("Edit Animal: " + pAnimal.getName());
+        if (this.aNameTextField != null) {
+            this.aNameTextField.setText(pAnimal.getName());
+        }
+        if (this.aAgeSpinner != null && this.aAgeSpinner.getValueFactory() != null) {
+            this.aAgeSpinner.getValueFactory().setValue(pAnimal.getAge());
+        }
     }
 
     /**
@@ -135,5 +139,15 @@ public class AnimalViewController {
     public void setEnclosure(Enclosure pEnclosure) {
         this.aEnclosure = pEnclosure;
         this.isNew = true;
+    }
+    /**
+     * Prepares the view for creating a new animal within the specified enclosure.
+     * Delegates to setEnclosure to properly initialize the target enclosure and isNew flag.
+     *
+     * @param currentEnclosure the enclosure that will contain the new animal
+     */
+
+    public void prepareForNewAnimal(Enclosure currentEnclosure) {
+        setEnclosure(currentEnclosure);
     }
 }
