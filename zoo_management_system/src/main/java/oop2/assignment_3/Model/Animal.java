@@ -89,6 +89,6 @@ public class Animal {
      */
     @Override
     public String toString() {
-        return this.getName() + "(" + this.getAge() + ")";
+        return this.getName() + " (" + Math.round(this.getAge()) + " yo)";
     }
 }
