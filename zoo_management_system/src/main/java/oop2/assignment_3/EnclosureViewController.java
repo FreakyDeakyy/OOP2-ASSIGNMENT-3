@@ -20,10 +20,11 @@ import oop2.assignment_3.Model.Enclosure;
  * Controller for managing individual enclosure views, displaying animals, and
  * handling CRUD operations (Add/Delete animals) according to the MVC pattern.
  *
- * @author YourName
+ * @author Aya
  */
 public class EnclosureViewController {
 
+    public Button openButton;
     @FXML
     private Label enclosureTitleLabel;
 
@@ -67,13 +68,14 @@ public class EnclosureViewController {
     @FXML
     private void handleAddAnimal(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/oop2a3zms/animal-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("animal-view.fxml"));
             Parent view = fxmlLoader.load();
 
-            // If you have an AnimalViewController, you can pass data or a
-            // callback here
-            // AnimalViewController animalController =
-            // fxmlLoader.getController();
+            AnimalViewController animalController = fxmlLoader.getController();
+            if (animalController != null && currentEnclosure != null) {
+                // Pass the current enclosure so the new animal can be added directly to it
+                animalController.prepareForNewAnimal(currentEnclosure);
+            }
 
             Scene nextScene = new Scene(view, 400, 300);
             Stage nextStage = new Stage();
@@ -83,7 +85,7 @@ public class EnclosureViewController {
             nextStage.initOwner(((Node) event.getSource()).getScene().getWindow());
             nextStage.showAndWait();
 
-            // After closing the modal, update view in case an animal was added
+            // Refresh the ListView to display the newly added animal
             updateView();
         } catch (IOException e) {
             e.printStackTrace();
@@ -91,8 +93,7 @@ public class EnclosureViewController {
     }
 
     /**
-     * Handles the 'Delete' button action to remove the selected animal from the
-     * enclosure.
+     * Handles the 'Delete' button action to remove the selected animal from the enclosure.
      */
     @FXML
     private void handleRemoveAnimal() {
@@ -113,4 +114,39 @@ public class EnclosureViewController {
         stage.close();
     }
 
+    /**
+     * Handles the 'Open' button action to view or edit the selected animal.
+     */
+    @FXML
+    private void handleOpenAnimal(ActionEvent pEvent) {
+        Animal selectedAnimal = animalListView.getSelectionModel().getSelectedItem();
+
+        if (selectedAnimal != null) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("animal-view.fxml"));
+                Parent view = fxmlLoader.load();
+
+                AnimalViewController controller = fxmlLoader.getController();
+                if (controller != null) {
+                    // Pass the selected animal to view/edit its details
+                    controller.setAnimal(selectedAnimal);
+                }
+
+                Scene nextScene = new Scene(view, 500, 500);
+                Stage nextStage = new Stage();
+                nextStage.setScene(nextScene);
+                nextStage.setTitle(selectedAnimal.getName());
+                nextStage.initModality(Modality.WINDOW_MODAL);
+
+                // Fixed: Use pEvent instead of the null Image variable
+                nextStage.initOwner(((Node) pEvent.getSource()).getScene().getWindow());
+                nextStage.showAndWait();
+
+                // Refresh the ListView in case the animal's name/details were updated
+                updateView();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
