@@ -1,8 +1,7 @@
 package oop2.assignment_3;
 
 import java.io.IOException;
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.ArrayList;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,8 +19,17 @@ import oop2.assignment_3.Model.ZooComponent;
 import oop2.assignment_3.Model.ZooSection;
 import oop2.assignment_3.Model.ZooService;
 
+/**
+ * Controller for the zoo section view.
+ * <p>
+ * Displays zoo sections and enclosures, shows the total number of animals,
+ * handles navigation through the zoo hierarchy, and opens enclosure views.
+ * </p>
+ *
+ * @author Owen Huxter
+ */
 public class ZooSectionViewController {
-    private final Deque<ZooSection> sectionHistory = new ArrayDeque<>();
+    private final ArrayList<ZooSection> sectionHistory = new ArrayList<>();
     private ZooSection currentSection;
 
     @FXML
@@ -37,6 +45,9 @@ public class ZooSectionViewController {
     private Button zooSectionBackButton;
 
     @FXML
+    private Label zooSectionTotalAnimalsLabel;
+
+    @FXML
     public void initialize() {
         ZooService zooService = ImportHelper.createZooService();
         ZooSection rootSection = zooService.getRootSection();
@@ -47,11 +58,16 @@ public class ZooSectionViewController {
     }
 
     @FXML
+    private void updateTotalAnimalsLabel() {
+        zooSectionTotalAnimalsLabel.setText("Total Animals In Section: " + currentSection.countAnimals());
+    }
+
+    @FXML
     void handleAcceptButtonClick() {
         ZooComponent selectedComponent = zooSectionSectionsListView.getSelectionModel().getSelectedItem();
         if (selectedComponent != null) {
             if (selectedComponent instanceof ZooSection) {
-                sectionHistory.push(currentSection);
+                sectionHistory.add(currentSection);
                 displaySection((ZooSection) selectedComponent);
             } else if (selectedComponent instanceof Enclosure) {
                 openEnclosure((Enclosure) selectedComponent);
@@ -68,7 +84,7 @@ public class ZooSectionViewController {
     @FXML
     void handleBackButtonClick() {
         if (!sectionHistory.isEmpty()) {
-            displaySection(sectionHistory.pop());
+            displaySection(sectionHistory.remove(sectionHistory.size() - 1));
         }
     }
 
@@ -76,6 +92,7 @@ public class ZooSectionViewController {
         currentSection = section;
         zooSectionHeaderLabel.setText(section.getName());
         zooSectionSectionsListView.getItems().setAll(section.getComponents());
+        updateTotalAnimalsLabel();
         zooSectionBackButton.setDisable(sectionHistory.isEmpty());
     }
 

@@ -3,6 +3,14 @@ package oop2.assignment_3.Model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a section of the zoo that can contain sections and inclosures
+ *
+ * 
+ * Acts as the largest grouping of animals within the Zoo.
+ *
+ * @author Owen Huxter
+ */
 public class ZooSection implements ZooComponent {
     private String aName;
     private final List<ZooComponent> aComponents = new ArrayList<>();
@@ -14,22 +22,21 @@ public class ZooSection implements ZooComponent {
 
     @Override
     public int countAnimals() {
-        return 0;
+        int totalAnimals = 0;
+        for (ZooComponent component : aComponents) {
+            totalAnimals += component.countAnimals();
+        }
+        return totalAnimals;
     }
 
     public ZooSection(String pName) {
         this.aName = pName;
     }
 
-    public void addComponent(Enclosure pEnclosure) {
-        if (pEnclosure != null) {
-            this.aComponents.add(pEnclosure);
-        }
-    }
-
-    public void addComponent(ZooSection pZooSection) {
-        if (pZooSection != null) {
-            this.aComponents.add(pZooSection);
+    // POLYMORPHISM
+    public void addComponent(ZooComponent pComponent) {
+        if (pComponent != null) {
+            this.aComponents.add(pComponent);
         }
     }
 

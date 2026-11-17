@@ -1,8 +1,8 @@
 package oop2.assignment_3.Model;
 
 /**
- * The {@code Animal} class represents an animal with a name and age.
- * It provides methods to access and modify these properties.
+ * The {@code Animal} class represents an animal with a name and age. It
+ * provides methods to access and modify these properties.
  * <p>
  * This class ensures that the age of the animal cannot be negative.
  * </p>
@@ -26,8 +26,9 @@ public class Animal {
      * Constructs a new {@code Animal} with the specified name and age.
      *
      * @param pName the name of the animal
-     * @param pAge  the age of the animal in years; must be non-negative
-     * @throws IllegalArgumentException if {@code pAge} is negative or {@code pName} is empty
+     * @param pAge the age of the animal in years; must be non-negative
+     * @throws IllegalArgumentException if {@code pAge} is negative or
+     * {@code pName} is empty
      */
     public Animal(String pName, double pAge) {
         this.setName(pName);
@@ -66,8 +67,8 @@ public class Animal {
     /**
      * Sets the age of the animal.
      * <p>
-     * The age must be non-negative. If a negative value is provided,
-     * an {@code IllegalArgumentException} is thrown.
+     * The age must be non-negative. If a negative value is provided, an
+     * {@code IllegalArgumentException} is thrown.
      * </p>
      *
      * @param pAge the new age of the animal in years
@@ -89,6 +90,6 @@ public class Animal {
      */
     @Override
     public String toString() {
-        return this.getName() + " (" + Math.round(this.getAge()) + " yo)";
+        return this.getName() + " (" + Math.round(this.getAge()) + " y/o)";
     }
 }
