@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="626a915a-89d5-4bff-806b-b28d10ae07f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/AnimalViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/AnimalViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/EnclosureViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/EnclosureViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/Model/Enclosure.java" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/Model/Enclosure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/resources/oop2/assignment_3/enclosure-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/resources/oop2/assignment_3/enclosure-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +31,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -42,7 +47,8 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -65,5 +71,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -7,7 +7,7 @@ import java.util.List;
  * Represents an enclosure that holds animals in the Zoo Management System. Acts
  * as a Leaf node in the Composite Design Pattern.
  *
- * @author YourName
+ * @author Aya
  */
 public class Enclosure implements ZooComponent {
     private String name;
