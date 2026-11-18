@@ -8,8 +8,8 @@ package oop2.assignment_3.Model;
  * unique characteristics.
  * </p>
  *
- * @author Owen Huxter
- * 
+ * @author Aya
+ *
  */
 public class Penguin extends Animal {
     public Penguin(String pName, double pAge) {
