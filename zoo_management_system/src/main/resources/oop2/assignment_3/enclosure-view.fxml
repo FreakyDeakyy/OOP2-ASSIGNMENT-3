@@ -16,6 +16,12 @@
             <Font name="System Bold" size="20.0" />
         </font>
     </Label>
+    <!-- Subtitle for Total Animals -->
+    <Label fx:id="animalCountLabel" text="Total Animals: 0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
 
     <!-- Animal ListView matching the whiteboard sketch -->
     <ListView fx:id="animalListView" prefHeight="250.0" prefWidth="300.0" />
