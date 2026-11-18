@@ -42,6 +42,9 @@ public class EnclosureViewController {
 
     private Enclosure currentEnclosure;
 
+    @FXML
+    private Label animalCountLabel;
+
     /**
      * Sets the enclosure to be displayed and populates the animal list view.
      *
@@ -58,6 +61,11 @@ public class EnclosureViewController {
     private void updateView() {
         if (currentEnclosure != null) {
             enclosureTitleLabel.setText(currentEnclosure.getName());
+            // Update the animal count subtitle label
+            if (animalCountLabel != null) {
+                int totalAnimals = currentEnclosure.countAnimals();
+                animalCountLabel.setText("Total Animals: " + totalAnimals);
+            }
             animalListView.getItems().setAll(currentEnclosure.getAnimals());
         }
     }
