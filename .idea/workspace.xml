@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626a915a-89d5-4bff-806b-b28d10ae07f6" name="Changes" comment="" />
+    <list default="true" id="626a915a-89d5-4bff-806b-b28d10ae07f6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/EnclosureViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zoo_management_system/src/main/java/oop2/assignment_3/EnclosureViewController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +33,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/count-enclosure",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Adm1/OneDrive - Champlain Regional College/2OOP2/OOP2-ASSIGNMENT-3",
